@@ -2,6 +2,28 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PopularItemWidget extends StatelessWidget {
+    List names = [
+    "Crossbody Bag",
+    "Hand Bag",
+    "Tory Burch",
+    "Hobo Bag",
+    "Shoulder Bag",
+    "Tote Bag",
+    "Hand Bag",
+    "Big Bag",
+    "Backpack Bag"
+  ];
+  List prices =[
+    "49",
+    "64",
+    "109",
+    "39",
+    "54",
+    "66",
+    "54",
+    "104",
+    "58"
+  ];
   @override
   Widget build(BuildContext context){
     return SingleChildScrollView(
@@ -46,7 +68,7 @@ class PopularItemWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Big Bag",
+                      names[i],
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -54,7 +76,7 @@ class PopularItemWidget extends StatelessWidget {
                     ),
                     SizedBox(height: 4,),
                     Text(
-                      "Taste our Big Bag",
+                      "Sophisticated. Functional. Stylish.",
                       style: TextStyle(
                         fontSize: 15,
                       ),
@@ -63,7 +85,7 @@ class PopularItemWidget extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "\$50",
+                          "\$"+prices[i],
                           style: TextStyle(
                             fontSize: 17,
                             color: Colors.red,

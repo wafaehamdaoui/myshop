@@ -22,6 +22,9 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, "/home");
+            },
             leading: Icon(
               CupertinoIcons.home,
               color: Colors.red,
@@ -35,6 +38,9 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, "profilPage");
+            },
             leading: Icon(
               CupertinoIcons.person,
               color: Colors.red,
@@ -48,6 +54,9 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, "cartPage");
+            },
             leading: Icon(
               CupertinoIcons.cart_fill,
               color: Colors.red,
@@ -61,6 +70,9 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, "wishListPage");
+            },
             leading: Icon(
               CupertinoIcons.heart_fill,
               color: Colors.red,
@@ -74,6 +86,9 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, "/");
+            },
             leading: Icon(
               Icons.exit_to_app,
               color: Colors.red,

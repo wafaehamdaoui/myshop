@@ -7,7 +7,7 @@ class CategoriesWidget extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Padding(padding: EdgeInsets.symmetric(vertical: 15, horizontal: 5),
         child: Row(children: [
-         for(int i=0; i<6; i++)
+         for(int i=0; i<7; i++)
           Padding(
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: Container(

@@ -5,6 +5,28 @@ import '../widgets/AppBarWidget.dart';
 import '../widgets/CartBottomNavBar.dart';
 import '../widgets/DrawerWidget.dart';
 class CartPage extends StatelessWidget {
+
+   List names = [
+    "Hand Bag",
+    "Tory Burch",
+    "Hobo Bag",
+    "Backpack Bag"
+  ];
+  static List prices =[
+    "49",
+    "64",
+    "109",
+    "39",
+  ];
+
+ static int calculateTotal(List prices) {
+  int total = 0;
+  for (String price in prices) {
+    total += int.parse(price);
+  }
+  return total;
+}
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -31,7 +53,7 @@ class CartPage extends StatelessWidget {
                       ),
                       ),
                     ),
-                    for(int i=0; i<5; i++)
+                    for(int i=0; i<4; i++)
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 9),
                       child: Container(
@@ -65,20 +87,20 @@ class CartPage extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      "Big Bag",
+                                      names[i],
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
-                                      "Taste our hot pizza",
+                                      "Sophisticated. Functional. Stylish.",
                                       style: TextStyle(
                                         fontSize: 15,
                                       ),
                                     ),
                                     Text(
-                                      "\$10",
+                                      "\$"+prices[i],
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
@@ -100,11 +122,11 @@ class CartPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Icon(
-                                        CupertinoIcons.minus,
+                                        CupertinoIcons.plus,
                                         color: Colors.white,
                                       ),
                                       Text(
-                                        i.toString(),
+                                        (i+1).toString(),
                                         style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
@@ -150,7 +172,7 @@ class CartPage extends StatelessWidget {
                                       style: TextStyle(fontSize: 20),
                                     ),
                                   Text(
-                                    "\$60",
+                                    "\$"+calculateTotal(prices).toString(),
                                     style: TextStyle(fontSize: 20),
                                   ),
                               ],),
@@ -192,7 +214,7 @@ class CartPage extends StatelessWidget {
                                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                     ),
                                     Text(
-                                      "\$80",
+                                      "\$"+(calculateTotal(prices)+20).toString(),
                                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
                                     ),
                                   ],

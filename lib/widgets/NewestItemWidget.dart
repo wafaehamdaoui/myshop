@@ -3,6 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class NewestItemWidget extends StatelessWidget {
+    List names = [
+    "Crossbody Bag",
+    "Hand Bag",
+    "Tory Burch",
+    "Hobo Bag",
+    "Shoulder Bag",
+    "Tote Bag",
+    "Hand Bag",
+    "Big Bag",
+    "Backpack Bag"
+  ];
+  List prices =[
+    "49",
+    "64",
+    "109",
+    "39",
+    "54",
+    "66",
+    "54",
+    "104",
+    "58"
+  ];
   @override
   Widget build(BuildContext context){
     return SingleChildScrollView(
@@ -46,14 +68,14 @@ class NewestItemWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
-                        "Big Bag",
+                        names[i],
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
-                        "taste our Big Bag, we provide our best for you!",
+                        "Sophisticated. Functional. Stylish.",
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -72,7 +94,7 @@ class NewestItemWidget extends StatelessWidget {
                         onRatingUpdate: (index) {},
                       ),
                       Text(
-                        "\$60",
+                        "\$"+prices[i],
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.red,

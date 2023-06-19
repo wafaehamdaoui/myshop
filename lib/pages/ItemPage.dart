@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../widgets/AppBarWidget.dart';
+import '../widgets/DrawerWidget.dart';
 import '../widgets/ItemBottomNavBar.dart';
 
 class ItemPage extends StatelessWidget{
@@ -18,7 +19,7 @@ class ItemPage extends StatelessWidget{
             Padding(
               padding: EdgeInsets.all(16),
               child: Image.asset(
-                "assets/Images/bag_1.png",
+                "assets/images/bag_1.png",
                 height: 300,
                 //width: double.infinity,
                 ),
@@ -71,7 +72,7 @@ class ItemPage extends StatelessWidget{
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Big Bag",
+                            "Hand Bag",
                             style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                           ),
                           Container(
@@ -113,7 +114,7 @@ class ItemPage extends StatelessWidget{
                         vertical: 10,
                       ),
                       child: Text(
-                        "Taste our big bag at low price, this is famous pizza and you will love it. it will cost you at low price, we hope you will enjoy and order many items.",
+                        "Step into the world of convenience with our Big Bag, boasting an impressive capacity that defies limits. Crafted from high-quality materials, including robust canvas and reinforced nylon, this bag is built to last. Its durable construction ensures that your belongings remain safe and secure throughout your journey.",
                         style: TextStyle(fontSize: 16),
                         textAlign: TextAlign.justify,
                       ),
@@ -157,6 +158,7 @@ class ItemPage extends StatelessWidget{
           ],
         ),
       ),
+      drawer: DrawerWidget(),
       bottomNavigationBar: ItemBottomNavBar(),
     );
   }

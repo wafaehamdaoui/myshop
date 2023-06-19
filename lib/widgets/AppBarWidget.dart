@@ -56,4 +56,3 @@ class AppBarWidget extends StatelessWidget {
       );
   }
 }
-// dart:ui/painting.dart:failed assertion: line 189 pos 12:

@@ -1,10 +1,18 @@
+
 import 'package:flutter/material.dart';
+import 'package:myshop/dbHelper/mongodb.dart';
+import 'package:myshop/pages/Login.dart';
+import 'package:myshop/pages/ProfilePage.dart';
+import 'package:myshop/pages/WishListPage.dart';
+import 'package:myshop/pages/insert.dart';
 
 import 'pages/CartPage.dart';
 import 'pages/HomePage.dart';
 import 'pages/ItemPage.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await MongoDatabase.connect();
   runApp(const MyApp());
 }
 
@@ -21,9 +29,13 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFF5F5F3),
       ),
       routes: {
-        "/": (context) => HomePage(),
+        "/register": (context) => MongoDbInsert(),
+        "/home": (context) => HomePage(),
+        "/": (context) => Login(),
         "cartPage": (context) => CartPage(),
+        "wishListPage": (context) => WishListPage(),
         "ItemPage": (context) => ItemPage(),
+        "profilPage": (context) => ProfilPage(),
       },
     );
   }
